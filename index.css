@@ -60,6 +60,12 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+@media (max-width:550px){
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
 
 /* make images easier to work with */
 img,
@@ -422,6 +428,3 @@ header .register:hover {
   }
 }
 
-@media(max-width:400px){
-  .main 
-}
