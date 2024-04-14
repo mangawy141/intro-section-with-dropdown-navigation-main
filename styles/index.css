@@ -58,7 +58,8 @@ body {
   background-color: hsl(var(--Almost-White));
   line-height: 1.5;
   min-height: 100vh;
-  overflow: hidden;
+  min-height:100dvh;
+  overflow-x: hidden;
 }
 
 /* make images easier to work with */
