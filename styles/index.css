@@ -277,6 +277,7 @@ header .register:hover {
     top: -34px;
     right: 0px;
     height: 100vh;
+    height: 105dvh;
     margin: 0;
     width: 0;
     transition: 0.3s;
@@ -348,6 +349,7 @@ header .register:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom:0.5rem;
 }
 .left_side .icons-grp img {
   height: 1rem;
