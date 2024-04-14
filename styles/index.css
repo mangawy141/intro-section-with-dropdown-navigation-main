@@ -58,8 +58,13 @@ body {
   background-color: hsl(var(--Almost-White));
   line-height: 1.5;
   min-height: 100vh;
-  min-height:100dvh;
   overflow-x: hidden;
+}
+@media (max-width:550px){
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
 }
 
 /* make images easier to work with */
@@ -99,6 +104,7 @@ ul {
 a {
   transition: 0.3s;
 }
+
 
 .container {
   margin-inline: auto;
@@ -263,9 +269,9 @@ header .register:hover {
     display: none;
   }
   .mobile-menu {
-    /* position: relative; */
     position: absolute;
     right: 0;
+    top: 0;
   }
   .mobile-menu .primary-navigation {
     flex-direction: column;
@@ -273,30 +279,34 @@ header .register:hover {
     align-items: flex-start;
     background-color: hsl(var(--Almost-White));
     padding-top: 5rem;
-    position: absolute;
-    top: -34px;
+    position:fixed;
+    top: 0;
     right: 0px;
     height: 100vh;
-    height: 105dvh;
+    min-height: 100dvh;
     margin: 0;
-    width: 0;
-    transition: 0.3s;
-    display: none;
+    width: 65vw;
+    transition: 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+  .slide {
+    transform: translateX(0) !important;
   }
   .mobile-menu .primary-navigation li:not(li:has(button)) {
     padding-left: 1.5rem;
     position: relative;
   }
-  .mobile-menu .primary-navigation li:has(button){
+  .mobile-menu .primary-navigation li:has(button) {
     margin-inline: auto;
   }
 
   .mobile-menu .primary-navigation .register {
     padding: 1rem 3.5rem;
   }
-  .mobile-menu .primary-navigation .register:hover {
-    background-color: hsl(var(--Almost-Black))  ;
-    color: hsl(var(--Almost-White)) ;
+  .mobile-menu .primary-navigation .register:hover,
+  .mobile-menu .primary-navigation .register:focus {
+    background-color: hsl(var(--Almost-Black));
+    color: hsl(var(--Almost-White));
   }
 }
 .sidebar-shadow {
@@ -304,7 +314,6 @@ header .register:hover {
   -moz-box-shadow: -35vw 0px 0px 2px rgba(0, 0, 0, 0.45);
   box-shadow: -35vw 0px 0px 2px rgba(0, 0, 0, 0.7);
 }
-
 
 /* end comllapsed side-bar */
 /* start section */
@@ -339,7 +348,8 @@ header .register:hover {
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
-.container .left_side button:hover {
+.container .left_side button:hover,
+.container .left_side button:focus {
   background-color: hsl(var(--Almost-White));
   color: hsl(var(--Almost-Black));
   border: 1px solid hsl(var(--Almost-Black));
@@ -349,7 +359,7 @@ header .register:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom:0.5rem;
+  padding-bottom: 0.5rem;
 }
 .left_side .icons-grp img {
   height: 1rem;
@@ -423,3 +433,4 @@ header .register:hover {
     margin-bottom: 1.25rem;
   }
 }
+
