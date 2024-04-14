@@ -36,7 +36,7 @@ sidebar.addEventListener("click", function () {
     clicked = false;
   } else {
     sidebar_icon.setAttribute("src", "images/icon-menu.svg");
-    mobile_menu.style.dispay = "none";
+    mobile_menu.style.display = "none";
     mobile_menu.style.width = "0";
     mobile_menu.classList.remove('sidebar-shadow')
     // mobile_menu.style.display = "none";
